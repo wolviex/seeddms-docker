@@ -1,13 +1,16 @@
 # Information
 
 Builds a docker image for seeddms (https://www.seeddms.org).
+Extended from image created by nlippke (https://github.com/nlippke/seeddms-docker)
 
 This image supports OCR processing for images and PDFs out of the box. Other types can be configured and converted using web interface.
 Cron is also included to handle jobs internally (backup, index, ...).
 
 ## How to run
 
-`docker run --name seeddms -d -v dms-data:/var/www/seeddms/data -p 8080:80 nlippke/seeddms:6.0.21`
+~docker run --name seeddms -d -v dms-data:/var/www/seeddms/data -p 8080:80 nlippke/seeddms:6.0.21~
+
+`docker run --name seeddms -d -v dms-data:/var/www/seeddms/data -p 8080:80 ghcr.io/wolviex/seeddms-docker:nightly`
 
 or as compose file
 
@@ -84,3 +87,4 @@ If migrating from an existing 5.1 installation you need to update database first
 ## Additional information
 
 The image is base on https://github.com/ludwigprager/docker-seeddms.
+Extended from image created by nlippke (https://github.com/nlippke/seeddms-docker)
