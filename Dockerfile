@@ -11,7 +11,7 @@ ENV PUBLIC_CERT=${SEEDDMS_BASE}/conf/cacert.pem \
 # Update and install necessary packages
 RUN apt-get update && apt-get install --no-install-recommends gnumeric libpng-dev catdoc poppler-utils a2ps html2text \
     id3 docx2txt tesseract-ocr tesseract-ocr-deu ocrmypdf imagemagick vim parallel dos2unix cron rsync libzip-dev \
-    libmagickwand-dev unoconv libreoffice-writer-nogui libreoffice-calc-nogui -y && rm -rf /var/lib/apt/lists/*
+    libmagickwand-dev unoconv -y && rm -rf /var/lib/apt/lists/*
 RUN printf "\n" | pecl install imagick
 RUN docker-php-ext-enable imagick
 RUN docker-php-ext-install gd mysqli pdo pdo_mysql zip && \
